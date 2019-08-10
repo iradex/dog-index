@@ -1,6 +1,6 @@
 :root {
-    --background-color: #E4E7EB;
-    --primary-color: #0B69A3;
+    --background-color: #E8E6E1;
+    --primary-color: #27241D;
 }
 
 body {
@@ -20,7 +20,7 @@ h1 {
 
 .btn {
     border: none;
-    background-color: #F5F7FA;
+    background-color: #D3CEC4;
     font-size: 14px;
     padding: 10px;
     margin-top: 5px;
@@ -89,7 +89,7 @@ ul li {
     margin-bottom: 0;
   }
 
-  .poke-pic {
+  .dog-pic {
       width: 150px;
       display: block;
   }
