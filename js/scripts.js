@@ -1,8 +1,8 @@
-var dogIndex = (function () {
-	var dogRepository = (function () {
+(function dogIndex () {
+  let dogRepository = (function () {
 
-		var repository = [];
-		var apiUrl = 'https://dog.ceo/api/breeds/list/all';
+		let repository = [];
+		let apiUrl = 'https://dog.ceo/api/breeds/list/all';
 
 		function loadList() {
 			return $.ajax(apiUrl, {
@@ -22,11 +22,11 @@ var dogIndex = (function () {
 		function addListItem(dog) {
 			var list = $('.list-group');
 			var button = $('<button>' + dog + '</button>');
-			button.addClass("btn btn-lg list-group-item list-group-item-action").attr("data-toggle", "modal").attr("data-target", "#dog-modal").attr("type", "button");
+			button.addClass('btn btn-lg list-group-item list-group-item-action').attr('data-toggle', 'modal').attr('data-target', '#dog-modal').attr('type', 'button');
 			list.append(button);
-			$(button).on("click", function () {
-				$(".modal-title").empty();
-				$(".modal-body").empty();
+			$(button).on('click', function () {
+				$('.modal-title').empty();
+				$('.modal-body').empty();
 				dogRepository.loadDetails(dog);
 			});
 		}
@@ -36,9 +36,9 @@ var dogIndex = (function () {
 			return $.ajax(url, {
 				dataType: 'json'
 			}).then(function (details) {
-				imageUrl = details.message;
-				$(".modal-title").text(item);
-				$(".modal-body").append('<img src="' + imageUrl + '" class ="dog-pic">');
+				var imageUrl = details.message;
+				$('.modal-title').text(item);
+				$('.modal-body').append('<img src="' + imageUrl + '" class ="dog-pic">');
 			}).catch(function (e) {
 				console.error(e);
 			});
